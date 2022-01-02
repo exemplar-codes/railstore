@@ -1,6 +1,10 @@
 class UserController < ApplicationController
     def index
-        @users = User.all
+        user = User.new
+        user.name = user.email = "Check"
+        user.isadmin = true
+        # @users = User.all
+        @users = [user, user]
     end
 
     def show
