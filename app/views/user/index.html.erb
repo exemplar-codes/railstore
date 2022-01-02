@@ -1,0 +1,23 @@
+<h1>Users</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Admin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @users.each do |user| %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td>
+                    <span style="color: <%= user.isadmin ? "green" : "red"%>">
+                        <%= user.isadmin ? "Yes" : "No" %>
+                    </span>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
