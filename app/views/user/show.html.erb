@@ -1,0 +1,18 @@
+<main class="center">
+    <h1> User - <%= user.id %></h1>
+    <p> Username: <%= user.username%> </p>
+    <p> Email: <%= user.email%> </p>
+    <p style="color: <%= user.isadmin ? "green" : "red"%>">
+        <%= user.isadmin ? "Yes" : "No" %>
+    </p>
+
+    <hr />
+    <h2> <%= user.isadmin ? "Added Items" : "Purchases" %></h2>
+    <table>
+        <thead>
+
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</main>
