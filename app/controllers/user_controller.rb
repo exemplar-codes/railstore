@@ -16,4 +16,15 @@ class UserController < ApplicationController
 
     def new
     end
+
+    def create
+        if User.find(params[:email]) == nil
+            user = User.new
+            user.username = params[:username]
+            user.isadmin = params[:isadmin]
+
+            user.save
+            flash[:success] = "New user created"
+        flash[:failure] = "Email already exists"
+    end
 end
