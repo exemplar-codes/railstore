@@ -1,4 +1,9 @@
 <h1>New User</h1>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 <div>
     <form>
         <label for="username">Name</label>
